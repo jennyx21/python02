@@ -10,7 +10,7 @@ def garden_operations(operation_number: int) -> None:
 
     elif operation_number == 1:
         try:
-            num = 42
+            num = 42.0
             num = num / 0
             print("Operation completed succesfully\n")
         except ZeroDivisionError as e:
