@@ -3,9 +3,9 @@ def test_temperature(temp_str) -> None:
     try:
         temp: int = int(temp_str)
         if (temp > 40):
-            print(f"Error: {temp}°C is too hot for plants (max 40°C)\n")
+            raise Exception(f"{temp}°C is too hot for plants (max 40°C)\n")
         elif (temp < 0):
-            print(f"Error: {temp}°C is too cold for plants (min 0°C)\n")
+            raise Exception(f"{temp}°C is too cold for plants (min 0°C)\n")
         else:
             print(f"Temperature is now {temp}°C\n")
 
@@ -17,6 +17,8 @@ def input_temperatur() -> None:
     print("=== Garden Temperature Checker ===\n")
     test_temperature("25")
     test_temperature("falaffel")
+    test_temperature("100")
+    test_temperature("-50")
     print("All test completed - program didn't crash!")
 
 
