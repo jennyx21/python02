@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 class PlantError(Exception):
     def __init__(self, message, plant):
         self.plant = plant

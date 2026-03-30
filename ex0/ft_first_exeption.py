@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 def test_temperature(temp_str) -> None:
     print(f"input data is '{temp_str}'")
     try:

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 def garden_operations(operation_number: int) -> None:
     if operation_number == 0:
         try:
@@ -10,19 +11,22 @@ def garden_operations(operation_number: int) -> None:
 
     elif operation_number == 1:
         try:
-            num = 42.0
-            num = num / 0
+            num = 42 / 0
+            print(num)
             print("Operation completed succesfully\n")
         except ZeroDivisionError as e:
             print(f"Caught ZeroDivitionError: {e}\n")
 
     elif operation_number == 2:
+        f = None
         try:
-            file = "file_not_exist.txt"
-            open(file)
+            f = open("file_not_exist.txt")
             print("Operation completed succesfully\n")
         except FileNotFoundError as e:
             print(f"caught FileNotFoundError: {e}\n")
+        finally:
+            if f:
+                f.close()
 
     elif operation_number == 3:
         try:

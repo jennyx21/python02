@@ -1,11 +1,12 @@
+#!/usr/bin/env python3
 def test_temperature(temp_str) -> None:
     print(f"input data is '{temp_str}'")
     try:
         temp: int = int(temp_str)
         if (temp > 40):
-            raise Exception(f"{temp}°C is too hot for plants (max 40°C)\n")
+            raise Exception(f"{temp}°C is too hot for plants (max 40°C)")
         elif (temp < 0):
-            raise Exception(f"{temp}°C is too cold for plants (min 0°C)\n")
+            raise Exception(f"{temp}°C is too cold for plants (min 0°C)")
         else:
             print(f"Temperature is now {temp}°C\n")
 

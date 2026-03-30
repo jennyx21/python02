@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 class GardenError(Exception):
     def __init__(self, message):
         super().__init__(message)
@@ -17,7 +18,7 @@ class WaterError(GardenError):
 
 def trigger_errors(water, plant):
     if plant not in ["rose", "tulp", "sunflower"]:
-        raise PlantError(f"the plant {plant} is willting!", plant)
+        raise PlantError(f" the plant {plant} is willting!", plant)
     if water < 10:
         raise WaterError("not enough water in the tank!", water)
 
@@ -33,12 +34,12 @@ def ft_costum_error():
     try:
         trigger_errors(11, "tomato")
     except PlantError as e:
-        print(f"{e}\n")
+        print(f"Caught an PlantError: {e}\n")
     print("testint WaterError...")
     try:
         trigger_errors(7, "rose")
     except WaterError as e:
-        print(f"{e}\n")
+        print(f"Caught an WaterError: {e}\n")
     print("Testing catching all GerdenErrors...")
     for water, plant in test:
         try:
